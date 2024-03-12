@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TesteController;
-use App\http\Controllers\ProdutoController;
+use App\http\Controllers\CategoriaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,10 +18,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('/teste', [TesteController::class, 'index']);
-
-Route ::get('/produto', [ProdutoController::class,'index']);
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/categoria', [CategoriaController::class, 'index'])->name('categoria.index');

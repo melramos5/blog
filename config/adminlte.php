@@ -291,7 +291,17 @@ return [
 
     'menu' => [
         // Navbar items:
-    
+
+        [
+            'text' => 'Principal',
+            'url'  => 'home',
+            'icon'  => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Categoria',
+            'url'  => 'categoria',
+            'icon'  => 'fas fa-fw fa-user',
+        ],
         [
             'type'         => 'navbar-search',
             'text'         => 'search',
