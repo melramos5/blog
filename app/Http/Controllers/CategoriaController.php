@@ -12,7 +12,9 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        //
+         $categorias = Categoria::orderBy('nome', 'ASC')->get();
+        return view('categoria.index', ['categorias'=> $categorias]);
+        //dd($categorias);
     }
 
     /**
@@ -20,9 +22,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        $categorias = Categoria::orderBy('nome', 'ASC')->get();
-        return view('categoria.index');
-        //dd($categorias);
+
     }
 
     /**
