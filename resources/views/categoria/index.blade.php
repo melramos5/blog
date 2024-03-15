@@ -14,6 +14,7 @@
                           <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>
+                            <th scope="col"></th>
                           </tr>
                         </thead>
                     <tbody>
@@ -22,7 +23,8 @@
 
                           <tr>
                             <th scope="row">{{$value -> id}}</th>
-                            <td>{{$value -> nome}}</td>
+                            <td>{{$value -> nome }}</td>
+                            <td><a class = "btn btn-primary" href ="{{ url('/categoria/' . $value -> id) }}" role ="button">Visualizar</a></td>
                           </tr>
                            @endforeach
                         </tbody>
