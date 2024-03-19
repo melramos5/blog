@@ -22,7 +22,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-
+        return view('categoria.create');
     }
 
     /**
@@ -38,7 +38,8 @@ class CategoriaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $categoria = Categoria::find($id);
+        return view('categoria.show', ['categoria' => $categoria]);
     }
 
     /**

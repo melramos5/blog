@@ -21,9 +21,23 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// -------------------- CATEGORIA ---------------
+//CRUD
 
-
-
+//LISTAR GET
 Route::get('/categoria', [CategoriaController::class, 'index'])->name('categoria.index');
 
-Route ::get('/categoria/{id}', [CategoriaController]);
+//CREATE GET / STORE POST
+// create
+Route::get('/categoria/create', [CategoriaController::class, 'create'])->name('categoria.create');
+
+
+//SHOW - GET
+Route ::get('/categoria/{id}', [CategoriaController::class,'show'])->name('categoria.show');
+
+
+
+// EDIT GET / UPDATE PUT
+
+
+//DESTROY DELETE
