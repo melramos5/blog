@@ -31,6 +31,9 @@ Route::get('/categoria', [CategoriaController::class, 'index'])->name('categoria
 // create
 Route::get('/categoria/create', [CategoriaController::class, 'create'])->name('categoria.create');
 
+// store
+Route::post('/categoria/crate',[CategoriaController::class, 'store'])->name('categoria.store');
+
 
 //SHOW - GET
 Route ::get('/categoria/{id}', [CategoriaController::class,'show'])->name('categoria.show');
