@@ -5,11 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Categoria - editar </div>
+                <div class="card-header">Categoria - EDITAR</div>
 
                 <div class="card-body">
 
-                    @if ($errors->any())
+                @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
                             @foreach ($errors->all() as $error)
@@ -29,6 +29,7 @@
                 </form>
 
                 </div>
+
             </div>
         </div>
     </div>

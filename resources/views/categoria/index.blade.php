@@ -34,7 +34,18 @@
                             <td>{{$value -> nome }}</td>
                             <td><a class = "btn btn-primary" href ="{{ url('/categoria/' . $value -> id) }}" role ="button">Visualizar</a></td>
                             <td><a class = "btn btn-warning" href ="{{ url('/categoria/' . $value -> id . '/edit') }}" role ="button">Editar</a></td>
-                          </tr>
+                            <td>
+
+
+
+                <form method="POST" action="{{ url('/categoria/' . $value->id) }}">
+                    @csrf
+                    @method('DELETE')
+                  <input type="submit"  class="form-control" value="DELETAR">
+                </form>
+                
+                        </td>
+                        </tr>
                            @endforeach
                         </tbody>
                       </table>

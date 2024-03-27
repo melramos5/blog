@@ -61,7 +61,7 @@ class CategoriaController extends Controller
     public function edit(string $id)
     {
         $categoria = Categoria::find($id);
-        return view('categoria.edit', ['Categoria'=> $categoria]);
+        return view('categoria.edit', ['categoria'=> $categoria]);
     }
 
     /**
@@ -69,7 +69,20 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        //dd($id);
+        $messages = [
+            'nome.required' => 'O campo :attribute é obrigatório!',
+        ];
+
+        $validated = $request ->validate([
+                'nome'=>'required|min:3',
+        ], $messages );
+
+        $categoria = Categoria::find($id);
+        $categoria->nome = $request->nome;
+        $categoria->save();
+
+        return redirect('categoria')->with('status', 'Categoria atualizada com sucesso!');
     }
 
     /**
@@ -77,6 +90,9 @@ class CategoriaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $categoria = Categoria::find($id);
+        $categoria ->delete();
+
+        return redirect('categoria')->with('status', 'Categoria excluída com sucesso!');
     }
 }
