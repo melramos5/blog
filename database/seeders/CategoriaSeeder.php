@@ -18,11 +18,14 @@ class CategoriaSeeder extends Seeder
         ]);
 
         DB::table('categorias')->insert([
-            'nome' => 'Política',
+            'nome' => 'Bem-estar',
         ]);
 
         DB::table('categorias')->insert([
-            'nome' => 'Bem-estar',
+            'nome' => 'Política',
         ]);
+
+
+
     }
 }

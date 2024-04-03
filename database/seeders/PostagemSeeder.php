@@ -27,6 +27,12 @@ class PostagemSeeder extends Seeder
             'user_id' => 1,
             'categoria_id' => 2,
         ]);
+        DB::table('postagens')->insert([
+            'titulo' => 'melzita',
+            'conteudo' => 'ioioioioioioio',
+            'user_id' => 1,
+            'categoria_id' => 3,
+        ]);
 
     }
 }
