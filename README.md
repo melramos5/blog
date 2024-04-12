@@ -1,15 +1,23 @@
 ## Como clonar e instalar o sistema em outra máquina
 
-1) Clonar o repositório no github
+1) Clonar o repositório do GitHub
+Vá até o projeto no GitHub que deseja clonar e clique no botão verde escrito "<> Code" em seguida vai abrir um submenu e você deve clicar em "Open with GitHub Desktop". O GitHub Desktop vai abrir, em sua máquina, perguntando onde deve clonar o repositório. Clone no diretório "c:/xampp/htdocs/"
 
-2) Criar o arquivo .env com base no arquivo .env.example "copy .env.example .env"
+2) Abra o projeto no Visual Studio Code
+3) Crie o arquivo .env com base no arquivo .env.example
+Abra o terminal e execute o código entre aspas "copy .env.example .env"
 
-3) Mudar o nome do banco no arquivo .env
+4) Mude o nome do banco no arquivo .env
+Deve estar na linha 14 e originalmente deve estar escrito desta forma "DB_DATABASE=laravel" mude a palavra "laravel" para o nome do banco do seu projeto
 
-4) Rodar no terminal "composer install"
+5) Instale as depedências
+Abra o terminal e execute o código entre aspas "composer install"
 
-5) Rodar no terminal "php artisan key:generate"
+6) Gere a APP_KEY (chave de criptografia)
+Abra o terminal e execute o código entre aspas "php artisan key:generate"
 
-6) Rodar no terminal "php artisan migrate"
+7) Rode as migrations (criação das tabelas)
+Abra o terminal e execute o código entre aspas "php artisan migrate"
 
-7) Rodar no terminar "php artisan db:seed"
+8) Rode os SEEDs (inserção dos dados nas tabelas)
+Abra o terminal e execute o código entre aspas "php artisan db:seed"
